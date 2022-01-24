@@ -1,0 +1,28 @@
+{
+  "name": "trivial-trivia-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shwarzbergzelda/trivial-trivia-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shwarzbergzelda/trivial-trivia-backend/issues"
+  },
+  "homepage": "https://github.com/shwarzbergzelda/trivial-trivia-backend#readme",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.14.0"
+  }
+}
