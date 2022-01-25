@@ -32,14 +32,14 @@ router.post('/', async(req, res) => {
 router.get('/:category/getTopTen', async(req, res) => {
     try {
         const quizscores = await QuizScore.findAll({
-            group : 'score',
-            limit: 10,
+            // group : 'score',
+            // limit: 10,
 
-            // where: {category : req.params.category},
-            // limit : 10,
-            // order: [
-            //     ['score', 'DESC']
-            // ]
+            where: {category : req.params.category},
+            limit : 10,
+            order: [
+                ['score', 'DESC']
+            ]
         })
         res.status(200).send(quizscores)
     } catch (error) {
