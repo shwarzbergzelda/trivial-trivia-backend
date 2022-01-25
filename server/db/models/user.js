@@ -24,10 +24,6 @@ const User = database.define('user', {
     bestCategory: {
         type: Sequelize.TEXT,
         default: "No test taken yet",
-        allowNull : false,
-        validate: {
-            notEmpty: true
-        }
     },
 
     lastSeen: {
