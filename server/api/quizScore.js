@@ -29,7 +29,7 @@ router.post('/', async(req, res) => {
     }
 })
 
-router.get('/:category/getTopTen', async(req, res) => ){
+router.get('/:category/getTopTen', async(req, res) => {
     try {
         const quizscores = await QuizScore.findAll({
             where: {category : req.params.category},
