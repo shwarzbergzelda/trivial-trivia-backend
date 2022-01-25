@@ -13,7 +13,10 @@ const QuizScore = require('../db/models/quizScore')
 
 router.get('/:userName', async(req, res) => {
     try {
-        const userInfo = await User.findByPk(req.params.userName)
+        const userInfo = await User.findOne({
+            where: {userName : req.params.userName},
+            attributes : ['userName', 'bestCategory', 'lastSeen']
+        })
         res.send(userInfo)
     } catch (error) {
         res.send(error.message)
