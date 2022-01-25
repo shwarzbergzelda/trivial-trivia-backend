@@ -26,6 +26,11 @@ const User = database.define('user', {
         defaultValue: "No test taken yet",
     },
 
+    bestScore: {
+        type: Sequelize.INTEGER,
+        defaultValue : 0
+    },
+
     lastSeen: {
         type: Sequelize.DATE,
         allowNull : false,

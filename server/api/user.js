@@ -15,7 +15,7 @@ router.get('/:userName', async(req, res) => {
     try {
         const userInfo = await User.findOne({
             where: {userName : req.params.userName},
-            attributes : ['userName', 'bestCategory', 'lastSeen']
+            attributes : ['userName', 'bestCategory', 'bestScore', 'lastSeen']
         })
         res.send(userInfo)
     } catch (error) {
