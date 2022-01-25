@@ -29,31 +29,18 @@ router.post('/', async(req, res) => {
     }
 })
 
-router.put('/', async(req, res) => {
+router.get('/:category/getTopTen', async(req, res) => ){
     try {
-        const updateQuizScore = await QuizScore.update(req.body, { 
-            where : { id : req.body.id },
-            returning : true 
-        });
-        res.status(200).json({
-            newData: updateQuizScore[1][0].dataValues
+        const quizscores = await QuizScore.findAll({
+            where: {category : req.params.category},
+            limit : 10;
+            order: 'score DESC'
         })
+        res.status(200).send(quizscores)
     } catch (error) {
-        res.send(error.message)
+        res.status(404).send(error.message)
     }
-})
-
-router.delete('/:id', async(req, res) => {
-    try {
-        const inputid = req.params.id;
-        QuizScore.destroy({ where : { id : inputid } });
-        res.status(200).json({
-            outcome: `Deleted QuizScore with id ${inputid}.`
-        })
-    } catch (error) {
-        res.send(error.message)
-    }
-})
+}
 
 
 
