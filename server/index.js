@@ -66,7 +66,7 @@ const configureApp = () => {
 
 app.use('/quizscore', require('./api/quizScore'))
 app.use('/user', require('./api/user'))
-app.use('/auth', require('./auth/index'))
+// app.use('/auth', require('./auth'))
 
 const syncDb = async () => {
     await db.sync({ force: true });
