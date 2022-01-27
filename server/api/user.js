@@ -23,7 +23,19 @@ router.get('/:userName', async(req, res) => {
     }
 })
 
-router.post('/', async(req, res) => {
+router.get('/login/:userName', async(req, res) => {
+    try {
+        const userInfo = await User.findOne({
+            where: {userName : req.params.userName},
+            attributes : ['password']
+        })
+        res.send(userInfo)
+    } catch (error) {
+        res.send(error.message)
+    }
+})
+
+router.post('/signup', async(req, res) => {
     try {
         const newUser = await User.create(req.body)
         res.json(newUser)
