@@ -44,19 +44,19 @@ router.post('/signup', async(req, res) => {
     }
 })
 
-// router.put('/', async(req, res) => {
-//     try {
-//         const updateQuizScore = await QuizScore.update(req.body, { 
-//             where : { id : req.body.id },
-//             returning : true 
-//         });
-//         res.status(200).json({
-//             newData: updateQuizScore[1][0].dataValues
-//         })
-//     } catch (error) {
-//         res.send(error.message)
-//     }
-// })
+router.put('/updateUserInfo', async(req, res) => {
+    try {
+        const updatedUserInfo = await User.update(req.body, { 
+            where : { userName : req.body.userName },
+            returning : true 
+        });
+        res.status(200).json({
+            newData: updatedUserInfo[1][0].dataValues
+        })
+    } catch (error) {
+        res.send(error.message)
+    }
+})
 
 // router.delete('/:id', async(req, res) => {
 //     try {
