@@ -1,0 +1,125 @@
+{
+    "results": [
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Which cohort number is our group?",
+            "correct_answer": "3",
+            "incorrect_answers": [
+                "The very first",
+                "6",
+                "2"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Who is the nice guy that shared his notes in the slack chat?",
+            "correct_answer": "Rafid",
+            "incorrect_answers": [
+                "Tenzin",
+                "Mohammed",
+                "Justin Bieber"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "How many actual days were we in attendance for the seminar?",
+            "correct_answer": "19",
+            "incorrect_answers": [
+                "20",
+                "Don't know, slept in too many days",
+                "Anywehere between 27 and 250"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What relational database management system did we learn?",
+            "correct_answer": "PostgresSQL",
+            "incorrect_answers": [
+                "SQL",
+                "mySQL",
+                "mongoDB"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "How do you create and enter a new branch using Git?",
+            "correct_answer": "git checkout -b branch_name",
+            "incorrect_answers": [
+                "git checkout branch_name",
+                "I just push to main everytime",
+                "git branch branch_name"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What does DOM stand for?",
+            "correct_answer": "Document Object Model",
+            "incorrect_answers": [
+                "Family",
+                "Delayed Onset Muscle-Soreness",
+                "The Rock"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Which year does Tenzin wish he was born?",
+            "correct_answer": "1994",
+            "incorrect_answers": [
+                "2000",
+                "1492",
+                "1995"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Which CSS framework were we briefly introduced to?",
+            "correct_answer": "Tailwind",
+            "incorrect_answers": [
+                "Bootstrap",
+                "Bulma",
+                "Foundation"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "What time is lunch everday?",
+            "correct_answer": "Depends on Ariel's mood",
+            "incorrect_answers": [
+                "12",
+                "1",
+                "Y'all still eat??!!"
+            ]
+        },
+        {
+            "category": "TTP",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Will you complete the exit survey from Imani Council?",
+            "correct_answer": "Of Course I Will!!",
+            "incorrect_answers": [
+                "Definitely not",
+                "Why bother",
+                "Don't have time for that"
+            ]
+        }
+
+    ]
+}

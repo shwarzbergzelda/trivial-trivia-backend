@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended : true}))
 
 app.use('/quizscore', require('./api/quizScore'))
 app.use('/user', require('./api/user'))
+app.use('/getTTPquiz', require('./api/getTTPquiz'))
 
 db.sync().then(() =>{
     console.log('db synced')
