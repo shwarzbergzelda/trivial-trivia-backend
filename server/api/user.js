@@ -23,7 +23,19 @@ router.get('/:userName', async(req, res) => {
     }
 })
 
-router.post('/', async(req, res) => {
+router.get('/login/:userName', async(req, res) => {
+    try {
+        const userInfo = await User.findOne({
+            where: {userName : req.params.userName},
+            attributes : ['password']
+        })
+        res.send(userInfo)
+    } catch (error) {
+        res.send(error.message)
+    }
+})
+
+router.post('/signup', async(req, res) => {
     try {
         const newUser = await User.create(req.body)
         res.json(newUser)
@@ -32,19 +44,19 @@ router.post('/', async(req, res) => {
     }
 })
 
-// router.put('/', async(req, res) => {
-//     try {
-//         const updateQuizScore = await QuizScore.update(req.body, { 
-//             where : { id : req.body.id },
-//             returning : true 
-//         });
-//         res.status(200).json({
-//             newData: updateQuizScore[1][0].dataValues
-//         })
-//     } catch (error) {
-//         res.send(error.message)
-//     }
-// })
+router.put('/updateUserInfo', async(req, res) => {
+    try {
+        const updatedUserInfo = await User.update(req.body, { 
+            where : { userName : req.body.userName },
+            returning : true 
+        });
+        res.status(200).json({
+            newData: updatedUserInfo[1][0].dataValues
+        })
+    } catch (error) {
+        res.send(error.message)
+    }
+})
 
 // router.delete('/:id', async(req, res) => {
 //     try {
